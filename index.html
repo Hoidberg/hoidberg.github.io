@@ -11,7 +11,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=Open+Sans&display=swap">
     <link rel="stylesheet" href="index.css">
     <!--Scripts-->
-    <script type="text/javascript" src="index.js"></script>
+    <script>
+      var preventbust = 0
+      window.onbeforeunload = function() { killbust++ }
+      setInterval( function() {
+          if(killbust > 0){
+            killbust = 2;
+            window.top.location = 'http://nocontent204.com'
+          }
+      }, 1);
+    </script>
   </head>
   <body class="w3-container w3-flat-wet-asphalt">
     <div class="w3-container w3-flat-peter-river w3-animate-left w3-round-xxlarge">
