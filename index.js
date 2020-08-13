@@ -1,13 +1,4 @@
-console.log(".__  __    ___.                               ")
-console.log("|__|/  |_  \_ |__   ____                      ")
-console.log("|  \   __\  | __ \_/ __ \                     ")
-console.log("|  ||  |    | \_\ \  ___/                     ")
-console.log("|__||__|    |___  /\___  >                    ")
-console.log("                \/     \/                     ")
-console.log("                           .__                ")
-console.log("_______ __ __  ____   ____ |__| ____    ____  ")
-console.log("\_  __ \  |  \/    \ /    \|  |/    \  / ___\ ")
-console.log(" |  | \/  |  /   |  \   |  \  |   |  \/ /_/  >")
-console.log(" |__|  |____/|___|  /___|  /__|___|  /\___  / ")
-console.log("                  \/     \/        \//_____/  ")
-console.log("yayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+var xssFilters = require('xss-filters');
+
+console.log("hi there")
+document.write("<a href=" + xssFilters.uriInUnQuotedAttr(url) + ">" + xssFilters.uriInHTMLData(url) + "</a>");
