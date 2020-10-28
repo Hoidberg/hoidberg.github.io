@@ -1,14 +1,14 @@
 <script>
 	var windowObjectReference = null; // global variable
 
-	function openFFPromotionPopup() {
+	function redirect(URL, TargetName) {
 		if(windowObjectReference == null || windowObjectReference.closed)
 		/* if the pointer to the window object in memory does not exist
 		  or if such pointer exists but the window was closed */
 
 		{
-			windowObjectReference = window.open("http://www.spreadfirefox.com/",
-		       "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+			windowObjectReference = window.open(URL,
+		       TargetName, "resizable,scrollbars,status");
 			/* then create it. The new window will be created and
 			  will be brought on top of any other window. */
 		}
@@ -24,8 +24,8 @@
 </script>
 
 <p><a
- href="http://www.spreadfirefox.com/"
- target="PromoteFirefoxWindowName"
- onclick="openFFPromotionPopup();">
+ href="https://hoidberg.github.io/"
+ target="_Homepage"
+ onclick="redirect('https://hoidberg.github.io/', '_Homepage');">
 	Click me!
 </a></p>
