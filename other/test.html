@@ -7,13 +7,10 @@
 		  or if such pointer exists but the window was closed */
 
 		{
-			windowObjectReference = window.open(URL,
-		       TargetName, "resizable,scrollbars,status");
+			windowObjectReference = window.open(URL, TargetName, "resizable,scrollbars,status=no");
 			/* then create it. The new window will be created and
 			  will be brought on top of any other window. */
-		}
-		else
-		{
+		} else {
 			windowObjectReference.focus();
 			/* else the window reference must exist and the window
 			  is not closed; therefore, we can bring it back on top of any other
@@ -23,9 +20,8 @@
 	}
 </script>
 
-<p><a
- href="https://hoidberg.github.io/"
- target="_Homepage"
- onclick="redirect('https://hoidberg.github.io/', '_Homepage');">
-	Click me!
-</a></p>
+<p align="center">
+	<a href="https://hoidberg.github.io/" target="_Homepage" onclick="redirect('https://hoidberg.github.io/', '_Homepage');">
+		Click me!
+	</a>
+</p>
